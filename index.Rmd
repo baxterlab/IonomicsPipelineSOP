@@ -1,6 +1,6 @@
 ---
 title: "NexION Sample and Standard Preparation Procedure - Seed and Leaf Tissue"
-knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.md')) })
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
 author: "Greg Ziegler"
 date: "December 5, 2016"
 header-includes:
@@ -10,7 +10,7 @@ header-includes:
 - \fancyfoot[CO,CE]{}
 - \fancyfoot[LE,RO]{\thepage}
 output: 
-  md_document
+  html_document
 #  pdf_document:
 #    fig_caption: true
 ---
@@ -38,7 +38,7 @@ knitr::opts_chunk$set(echo = TRUE)
         1. Add 2.5 ml HNO$_3$ soln (HNO$_3$ soln = 20 ppb In in conc HNO$_3$; 50$\mu$L of 1000 ppm Indium added to **new** 2.5 L bottle of conc HNO$_3$).
     1. For experiments where average sample is less than 25mg:
         1. Add 1 ml HNO$_3$ soln (HNO$_3$ soln = 20 ppb In in conc HNO$_3$; 50$\mu$L of 1000 ppm Indium added to **new** 2.5 L bottle of conc HNO$_3$).
-    + **Note**: This is the most important step of sample preparation. Be certain the bottle-top dispenser is working properly (watch for air in he dispenser syringe) and make sure that each pump is delivering the correct amount to each tube. This can be checked gravimetrically if necessary.
+    + **Note**: This is the most important step of sample preparation. Be certain the bottle-top dispenser is working properly (watch for air in the dispenser syringe) and make sure that each pump is delivering the correct amount to each tube. Accuracy can be checked gravimetrically if necessary.
 1. Put tubes in heating blocks.
 1. Let stand at room temperature for minimum of 1.5 hours (typically overnight), to prevent boiling over.
 1. Digestion: Turn on warming block, set to maximum temperature (~95C). Digest for minimum of 4 hrs (until clear, with no residue on sides).
@@ -70,7 +70,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ##Conversion of $\mu$g analyte/L solution (ppb) to mg analyte/kg sample (ppm)
 
-The stanrd analytical procedure for seeds dilutes a weighed sample (X mg) into 10 mL of solution. This dilution is analyzed using the NexION, which gives results as ppb analyte. To convert to mg analyte/kg sample use this equation:
+The standard analytical procedure for seeds dilutes a weighed sample (X mg) into 10 mL of solution. This dilution is analyzed using the NexION, which gives results as ppb analyte. To convert to mg analyte/kg sample use this equation:
 
 $$\dfrac{Y \mu g\ Analyte}{1000 mL\ Dilution\ 1}\dfrac{10mL\ Dilution\ 1}{X\ mg\ Sample}\dfrac{1mg\ Analyte}{1000\mu g\ Analyte}\dfrac{10^6mg\ Sample}{1kg\ Sample} = $$
 $$\dfrac{Y \mu g\ Analyte}{X mg Sample}(10) = Z\dfrac{mg\ Analyte}{kg\ Sample}$$
