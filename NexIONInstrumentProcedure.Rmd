@@ -1,0 +1,95 @@
+---
+title: "NexION ICP-MS Instrument Procedure"
+author: "Greg Ziegler"
+date: "December 6, 2016"
+header-includes:
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhead[CO,CE]{}
+- \fancyfoot[CO,CE]{}
+- \fancyfoot[LE,RO]{\thepage}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Daily Instrument Maintenance and Start-up Procedure
+
+1. Check that Ar valves are opened at tanks. Check tank levels.
+    + Tanks need to maintain a pressure of 100PSI or greater to maintain instrument plasma. The pressure regulator valve can be opened to more rapidly increase tank pressure when necessary.
+1. Empty 20L waste container.
+1. Fill 20L rinse container with rinse solution.
+    + Rinse solution (prepared in 8L bottles):
+        1. 8L Ultra-pure water
+        1. 400$\mu$l Triton X-100 surfactant
+        1. 160ml HNO$_3$
+        
+###Cones, torch, injector maintenance
+
+1. Open instrument
+    1. Open hood and prop open with handle.
+    1. Press button on front of instrument to unlatch door.
+1. Use a flashlight to inspect the torch for any melted or burned areas.
+    + If present torch needs to be replaced.
+1. Inspect injector for clogs or wear.
+1. Inspect and clean clones.
+    + Use cone removal tool to unscrew cones and wash tips in a 5% nitric acid solution being careful not to get solution on O-rings.
+    + If O-rings are cracked or torn, replace.
+    + **Thoroughly** dry before putting back into instrument.
+1. Check tubing in peripump connecting drain line from spray chamber to waste container for tears or cracks, replace as necessary with MPP Santoprene Tubing, 1.52mm, yellow-blue.
+1. Check fill level on prepFAST diluent and internal standard containers. Refill when necessary following the procedure in '[Refilling prepFAST diluent and internal standard containers' section](#refill)
+    + A line has been marked on each container, if liquid level in either container is lower than this line, it is time to remake the solution because the next run will run out of liquid.
+1. Light plasma and let warm up for at least 30 minutes.
+1. Record in log controls used and run name.
+
+##Optimization
+
+1. Make sure Smart Tune solution is in autosampler position 4 and opened.
+1. Run Smart Tune daily. These can be run one at a time or in batch.
+    1. Look at the results of each step and make sure they haven't changed drastically from the day before. Large day-to-day changes indicate something isn't functioning properly.
+    1. Check the Daily Performance Check stats. Make sure they are at an acceptable level.
+        + Indium counts should be > 10,000 CPS.
+        + CeO/Ce ratio should be less than 0.1.
+1. If results are not acceptable, check tubing, check for air in syringes, turn of plasma, check and reseat cones.
+
+##Start Run
+
+1. Assign dataset file: Dataset button>File>New>enter filename (e.g. YYMMDDpX, pY)
+1. Open Method: Method button>File>Open>"qaupcd">open
+1. Assign sample file:
+    1. Sample button>File>Open>select desired file (Usually 'prepFAST 576 6-tray run, 5x dil')
+1. Batch tab>verify method (qaupcd.mth)
+1. 
+
+##When a run stops
+
+1. If it stops at less than 50 samples
+    + Repipette and start run over
+1. If it stops at more than 50 samples
+    + go back to last control run and restart run.
+
+##Post-run
+
+1. Check trays 
+1. Dump remaining digest into waste or collect in control.
+1. When full neutralize with sodium bicaronate.
+1. 2x wash with distilled water, 1x wash with upw, dry in oven.
+
+## Refilling prepFAST diluent and internal standard containers<a name="refill"/></a>
+
+1. Refill diluent container with 80mL HNO$_3$ and rest with ultra-pure water.
+1. Internal Standard container:
+    1. Fill 2/3rds with UPW.
+    1. Add 50ml analytical grade isopropyl alchohol under fume hood in lab.
+    1. Add 15$\mu$l 1000ppb Yttrium internal standard
+    1. Add 80ml HNO$_3$
+    1. Fill to top with UPW.
+    1. Mix container.
+1. After refilling either container, the syringes need to be flushed and refilled.
+    + **Note**: Plasma should not be lit for this procedure.
+    1. To prevent overflow into the spray chamber, unscrew the nebulizer tubing at the red nut just before the nebulizer and put free end into a beaker.
+    1. In the ESI-SC software select 'Syringe Fill Prime', this will run for about 10 minutes.
+        + Syringes will flush several times, watch to make sure air bubbles are being discharged from the syringe and refilled with only liquid.
+    1. Reconnect nebulizer.

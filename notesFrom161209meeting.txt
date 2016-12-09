@@ -1,0 +1,17 @@
+Shipment come in -> box is labeled with shipment number (next number from shipment tracker) and m of n boxes-> electronic shipment file from sender (Shipment number xxx_origFile.xlsx) -> put into shipment tracker -> make csv shipment file (shipmentNumber_shippingFile.csv) -> see CRIS documentation for format
+
+Better explanation for way racks should face. Small piece of green tap designates top right of tubes.
+
+Picking up missed seeds protocol?
+
+Robot cleaning -> About once a month (as necessary) -> Fill out document on sheet in sample prep room. Cover with paper towels, wipe off rust with brillo pads, oil rods with zoom-spout and kim-wipes. Then wipe off any excess with kim-wipes.
+
+Appendix -> consumables and catalog 
+
+Separate protocol for solutions as well.
+
+Order a new bottle-top dispenser.
+
+Figure out insulation.
+
+Test temperatures of heating blocks.
