@@ -1,8 +1,8 @@
 ---
 title: "NexION Sample and Standard Preparation Procedure - Seed and Leaf Tissue"
-knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'NexIONAnalyticalSampleandStandardsPreparation.html')) })
 author: "Greg Ziegler"
-date: "December 5, 2016"
+date: "April 19, 2018"
 header-includes:
 - \usepackage{fancyhdr}
 - \pagestyle{fancy}
