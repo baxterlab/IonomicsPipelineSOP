@@ -17,6 +17,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+require(kfigr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -76,7 +77,8 @@ The standard analytical procedure for seeds dilutes a weighed sample (X mg) into
 $$\dfrac{Y \mu g\ Analyte}{1000 mL\ Dilution\ 1}\dfrac{10mL\ Dilution\ 1}{X\ mg\ Sample}\dfrac{1mg\ Analyte}{1000\mu g\ Analyte}\dfrac{10^6mg\ Sample}{1kg\ Sample} = $$
 $$\dfrac{Y \mu g\ Analyte}{X mg Sample}(10) = Z\dfrac{mg\ Analyte}{kg\ Sample}$$
 
-$$\pagebreak$$
+------
+
 
 ##Tables and Figures
 
@@ -91,6 +93,7 @@ $$\pagebreak$$
 | Copper | Cu | 40 ppb | 20 $\mu$L of 1000 ppm reagent |
 | Indium | In | 20 ppb | 10 $\mu$L of 1000 ppm reagent |
 | Iron | Fe | 400 ppb | 200 $\mu$L of 1000 ppm reagent |
+| Lithium | Li | 20 ppb | 10 $\mu$L of 1000 ppm reagent |
 | Magnesium | Mg |  50 ppm | 2.5 mL of **10,000 ppm soln[^1]** |
 | Sulfur | S |  66 ppm | **13,193 ppm soln, Included in Mg soln above** |
 | Manganese | Mn | 500 ppb | 250 $\mu$L of 	1000 ppm reagent | 
@@ -123,6 +126,7 @@ Table: \label{stdDils} Prepare each standard in a 50mL centrifuge tube contaning
 
 |Name|Std 1 (ppb)|Std 2 (ppb)|Std 3 (ppb)|Std 4 (ppb)|Std 5 (ppb)|Std 6 (ppb)|
 | :------- | -------: | -------: | -------: | -------: | -------: | -------: |
+| Lithium | 0.1 | 0.2 | 0.5 | 1 | 2 | 5 |
 | Boron | 1.25 | 2.5 | 6.25 | 12.5 | 25 | 62.5 |
 | Sodium | 0.4 | 0.8 | 2 | 4 | 8 | 20 |
 | Magnesium | 250 | 500 | 1250 | 2500 | 5000 | 12500 |
@@ -143,11 +147,13 @@ Table: \label{stdDils} Prepare each standard in a 50mL centrifuge tube contaning
 | Strontium | 0.5 | 1 | 2.5 | 5 | 10 | 25 |
 | Molybdenum | 0.1 | 0.2 | 0.5 | 1 | 2 | 5 |
 | Cadmium | 0.01 | 0.02 | 0.05 | 0.1 | 0.2 | 0.5 |
+| Indium | 0.1 | 0.2 | 0.5 | 1 | 2 | 5 |
 
 Table: \label{stdConc} Concentration in standards (After dilution by prepFAST autodiluter), NexION ICP-MS.
 
 
-$$\pagebreak$$
+------
+
 
 ```{r plot-ref, fig.cap="Tube numbers in the standard 288 test tubes.\\label{fig:rackdiag}", echo=FALSE}
 knitr::include_graphics("TubeNumberinginRack.png")
