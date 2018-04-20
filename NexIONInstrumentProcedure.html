@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Greg Ziegler" />
+
+
+<title>NexION ICP-MS Instrument Procedure</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">NexION ICP-MS Instrument Procedure</h1>
+<h4 class="author"><em>Greg Ziegler</em></h4>
+<h4 class="date"><em>December 6, 2016</em></h4>
+
+</div>
+
+
+<div id="daily-instrument-maintenance-and-start-up-procedure" class="section level2">
+<h2>Daily Instrument Maintenance and Start-up Procedure</h2>
+<ol style="list-style-type: decimal">
+<li>Check that Ar valves are opened at tanks. Check tank levels.
+<ul>
+<li>Tanks need to maintain a pressure of 100PSI or greater to maintain instrument plasma. The pressure regulator valve can be opened to more rapidly increase tank pressure when necessary.</li>
+</ul></li>
+<li>Empty 20L waste container.</li>
+<li>Fill 20L rinse container with rinse solution.
+<ul>
+<li>Rinse solution (prepared in 8L bottles):
+<ol style="list-style-type: decimal">
+<li>8L Ultra-pure water</li>
+<li>400<span class="math inline">\(\mu\)</span>l Triton X-100 surfactant</li>
+<li>160ml HNO<span class="math inline">\(_3\)</span></li>
+</ol></li>
+</ul></li>
+</ol>
+<div id="cones-torch-injector-maintenance" class="section level3">
+<h3>Cones, torch, injector maintenance</h3>
+<ol style="list-style-type: decimal">
+<li>Open instrument
+<ol style="list-style-type: decimal">
+<li>Open hood and prop open with handle.</li>
+<li>Press button on front of instrument to unlatch door.</li>
+</ol></li>
+<li>Use a flashlight to inspect the torch for any melted or burned areas.
+<ul>
+<li>If present torch needs to be replaced.</li>
+</ul></li>
+<li>Inspect injector for clogs or wear.</li>
+<li>Inspect and clean clones.
+<ul>
+<li>Use cone removal tool to unscrew cones and wash tips in a 5% nitric acid solution being careful not to get solution on O-rings.</li>
+<li>If O-rings are cracked or torn, replace.</li>
+<li><strong>Thoroughly</strong> dry before putting back into instrument.</li>
+</ul></li>
+<li>Check tubing in peripump connecting drain line from spray chamber to waste container for tears or cracks, replace as necessary with MPP Santoprene Tubing, 1.52mm, yellow-blue.</li>
+<li>Check fill level on prepFAST diluent and internal standard containers. Refill when necessary following the procedure in ’<a href="#refill">Refilling prepFAST diluent and internal standard containers’ section</a>
+<ul>
+<li>A line has been marked on each container, if liquid level in either container is lower than this line, it is time to remake the solution because the next run will run out of liquid.</li>
+</ul></li>
+<li>Light plasma and let warm up for at least 30 minutes.</li>
+<li>Record in log controls used and run name.</li>
+</ol>
+</div>
+</div>
+<div id="optimization" class="section level2">
+<h2>Optimization</h2>
+<ol style="list-style-type: decimal">
+<li>Make sure Smart Tune solution is in autosampler position 4 and opened.</li>
+<li>Run Smart Tune daily. These can be run one at a time or in batch.
+<ol style="list-style-type: decimal">
+<li>Look at the results of each step and make sure they haven’t changed drastically from the day before. Large day-to-day changes indicate something isn’t functioning properly.</li>
+<li>Check the Daily Performance Check stats. Make sure they are at an acceptable level.
+<ul>
+<li>Indium counts should be &gt; 10,000 CPS.</li>
+<li>CeO/Ce ratio should be less than 0.1.</li>
+</ul></li>
+</ol></li>
+<li>If results are not acceptable, check tubing, check for air in syringes, turn of plasma, check and reseat cones.</li>
+</ol>
+</div>
+<div id="start-run" class="section level2">
+<h2>Start Run</h2>
+<ol style="list-style-type: decimal">
+<li>Assign dataset file: Dataset button&gt;File&gt;New&gt;enter filename (e.g. YYMMDDpX, pY)</li>
+<li>Open Method: Method button&gt;File&gt;Open&gt;“qaupcd”&gt;open</li>
+<li>Assign sample file:
+<ol style="list-style-type: decimal">
+<li>Sample button&gt;File&gt;Open&gt;select desired file (Usually ‘prepFAST 576 6-tray run, 5x dil’)</li>
+</ol></li>
+<li>Batch tab&gt;verify method (qaupcd.mth)</li>
+<li></li>
+</ol>
+</div>
+<div id="when-a-run-stops" class="section level2">
+<h2>When a run stops</h2>
+<ol style="list-style-type: decimal">
+<li>If it stops at less than 50 samples
+<ul>
+<li>Repipette and start run over</li>
+</ul></li>
+<li>If it stops at more than 50 samples
+<ul>
+<li>go back to last control run and restart run.</li>
+</ul></li>
+</ol>
+</div>
+<div id="post-run" class="section level2">
+<h2>Post-run</h2>
+<ol style="list-style-type: decimal">
+<li>Check trays</li>
+<li>Dump remaining digest into waste or collect in control.</li>
+<li>When full neutralize with sodium bicarbonate.</li>
+<li>2x wash with distilled water, 1x wash with upw, dry in oven.</li>
+</ol>
+</div>
+<div id="refilling-prepfast-diluent-and-internal-standard-containers" class="section level2">
+<h2>Refilling prepFAST diluent and internal standard containers<a name="refill"/></a></h2>
+<ol style="list-style-type: decimal">
+<li>Refill diluent container with 80mL HNO<span class="math inline">\(_3\)</span> and rest with ultra-pure water.</li>
+<li>Internal Standard container:
+<ol style="list-style-type: decimal">
+<li>Fill 2/3rds with UPW.</li>
+<li>Add 50ml analytical grade isopropyl alchohol under fume hood in lab.</li>
+<li>Add 15<span class="math inline">\(\mu\)</span>l 1000ppb Yttrium internal standard</li>
+<li>Add 80ml HNO<span class="math inline">\(_3\)</span></li>
+<li>Fill to top with UPW.</li>
+<li>Mix container.</li>
+</ol></li>
+<li>After refilling either container, the syringes need to be flushed and refilled.
+<ul>
+<li><strong>Note</strong>: Plasma should not be lit for this procedure.</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>To prevent overflow into the spray chamber, unscrew the nebulizer tubing at the red nut just before the nebulizer and put free end into a beaker.</li>
+<li>In the ESI-SC software select ‘Syringe Fill Prime’, this will run for about 10 minutes.
+<ul>
+<li>Syringes will flush several times, watch to make sure air bubbles are being discharged from the syringe and refilled with only liquid.</li>
+</ul></li>
+<li>Reconnect nebulizer.</li>
+</ol></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
