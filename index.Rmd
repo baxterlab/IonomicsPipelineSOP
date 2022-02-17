@@ -1,8 +1,11 @@
 ---
 title: "Ionomics Pipeline SOP Index"
-output: github_document
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
 author: "Greg Ziegler"
 date: "February 17, 2022"
+output: 
+  bookdown::html_document2:
+    fig_caption: true
 ---
 
 ```{r setup, include=FALSE}
@@ -13,6 +16,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This repository contains the most current SOP for the Baxter Laboratory Ionomics Pipeline. The SOP is divided into two parts: sample, standard, and control preparation and instrument procedure. 
 
-###[Sirius Automation Weighing Robot Operating Procedure](SiriusAutomationWeighingRobotProcedure.html)
-###[NexION Sample and Standard Preparation Procedure - Seed and Leaf Tissue](NexIONAnalyticalSampleandStandardsPreparation.html)
-###[NexION ICP-MS Instrument Procedure](NexIONInstrumentProcedure.html)
+### [Sirius Automation Weighing Robot Operating Procedure](SiriusAutomationWeighingRobotProcedure.html)
+### [NexION Standard Preparation Procedure - Seed and Leaf Tissue](NexIONAnalyticalSampleandStandardsPreparation.html)
+### [NexION ICP-MS Instrument Procedure](NexIONInstrumentProcedure.html)
